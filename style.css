@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.test{
+    border: 2px solid red;
+    /* добавим границу red 2px */
+    height: 100vh;
+    /* блок 100 %  или 50 от высоты окна браузера */
+    background-image: url(img/YouTube.png);
+    /* добавим тестовое изо */
+    background-attachment: fixed;
+    /* изо сделать неподвижным и привязать его к центру окна браузера */
+    background-repeat: no-repeat;
+    /* без повторения изо */
+    background-position: center;
+    /* переместим изо в центр */
+}
+body{
+    margin: 0;
+    height: 200vh;
+    /* сделаем body высотой 200%  от высоты окна браузера */
+
+}
+
+.parallax-image{
+    height: 100vh;
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.parallax-image:nth-child(1) {
+    background-image: url(img/bee1.jpg);
+}
+
+.parallax-image:nth-child(2) {
+    background-image: url(img/bee2.jpg);
+}
+
+.parallax-image:nth-child(3) {
+    background-image: url(img/bee3.jpg);
+}
+
+.parallax-image:nth-child(4) {
+    background-image: url(img/bee4.jpg);
+}
+
+.header {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    font-size: 72px;
+    color: #fff;
+    text-shadow: 2px 2px seagreen;
+}
+
+/* параллакс эффект при движении  */
+
+
+.mouse-parallax_content {
+    font-size: 250px;
+    color: #eaeef3;
+    text-shadow: 4px 4px 6px #000;
+    /* background-image: url(img/bee72.jpg); */
+}
+
+.mouse-parallax {
+    position: relative;
+    /* блок будет иметь относительное позиционирование чтоб позже мы спозиционировали блок с нашим фоном */
+    display: flex;
+    /* также будет флекс контейнером */
+    align-items: center;
+    justify-content: center;
+    /* все его элементы будутрасположены в центре */
+    height: 100vh;
+    /* высота 100%, все элементы выходящие за пределы блока будут скрыватся */
+    overflow: hidden;
+}
+
+.mouse-parallax_background {
+    position: absolute;
+    /* будет иметь блок абсолютное позиционирование */
+    z-index: -1;
+    /* если не задать z-inde то он будет перекрывать наш текст */
+    width: 110%;
+    height: 110%;
+    /* w и h для манёвра */
+    background-image: url(img/stars.gif);
+    background-position: center center;
+    /* скажем чтоб изо было в центре */
+    background-size: cover;
+    /* чтоб растягивалось на ширину и высоту блока но без икожений */
+}
